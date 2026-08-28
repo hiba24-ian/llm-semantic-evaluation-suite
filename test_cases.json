@@ -1,0 +1,18 @@
+{
+  "evaluation_suite": [
+    {
+      "id": 1,
+      "prompt": "Explain the concept of model quantization in LLMs.",
+      "model_output": "Model quantization reduces the precision of model weights from 32-bit floating point to lower bits like 8-bit or 4-bit, which significantly decreases memory footprint and speeds up inference with minimal accuracy loss.",
+      "ground_truth": "Quantization reduces weight precision (e.g., from FP32 to INT8/INT4) to reduce memory usage and accelerate inference performance.",
+      "category": "Technical Explanation"
+    },
+    {
+      "id": 2,
+      "prompt": "What are the core steps in a secure ML pipeline?",
+      "model_output": "A secure ML pipeline requires data sanitization, access controls, model evaluation, and continuous monitoring against adversarial attacks and drift.",
+      "ground_truth": "Core steps include secure data ingestion, validation, role-based access control, rigorous model evaluation, and safety monitoring.",
+      "category": "AI Governance & Security"
+    }
+  ]
+}
