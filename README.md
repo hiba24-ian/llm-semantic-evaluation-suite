@@ -1,19 +1,24 @@
-# LLM Semantic Evaluation Suite
+# LLM Response Similarity — Evaluation Demo
 
-An advanced Python-based auditing and evaluation framework designed to measure Large Language Model (LLM) response quality, semantic accuracy, and execution performance in production environments.
+A small Python exercise that compares the unique words in sample model outputs with reference answers and reports a simple overlap score.
 
-## Features
-- **Automated Response Scoring:** Compares model outputs against reference benchmarks to calculate precision scores.
-- **Latency & Performance Tracking:** Measures response generation time and execution metrics.
-- **Comprehensive Logging:** Generates structured reports for audit and compliance checks.
+## What it demonstrates
+- Loading sample evaluation cases from JSON
+- Tokenising text with basic whitespace splitting
+- Calculating a Jaccard-style word-set overlap score
+- Reporting an average score and script execution time
 
-## Project Structure
-- `README.md`: Project documentation and architecture overview.
-- `eval_metrics.py`: Python engine for computing similarity scores and tracking execution time.
-- `test_cases.json`: Structured benchmark dataset containing prompts, model outputs, and expected ground truth.
+## Run
+```bash
+python eval_metrics.py
+```
 
-## How to Run
-1. Ensure Python is installed on your system.
-2. Clone the repository:
-   ```bash
-   git clone [https://github.com/hiba24-ian/llm-semantic-evaluation-suite.git](https://github.com/hiba24-ian/llm-semantic-evaluation-suite.git)
+## Important scope and limitations
+Despite the repository's original name, this implementation does **not** perform semantic evaluation. It uses simple word-set overlap, which does not understand synonyms, meaning, factual correctness, or context. The execution-time figure is a basic local script timing, not a production latency benchmark.
+
+## Files
+- `eval_metrics.py` — word-overlap calculation and reporting
+- `test_cases.json` — illustrative test cases
+
+## Author
+Hiba Almamoori
